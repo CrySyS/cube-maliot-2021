@@ -7,7 +7,7 @@
     "properties": {
         "architecture": {
             "description": "Architecture of the malware, ARM or MIPS.",
-            "type": "string"
+            "enum": ["ARM", "MIPS"]
         },
         "av_labels_generation_date ": {
             "description": "Date & time of the last VirusTotal analysis of the sample used for AVClass label generation in ISO format.",
@@ -22,7 +22,7 @@
             "type": "object",
             "properties": {
                 "abi_version": {
-                    "description": "Identifies the operating system and ABI to which the object is targeted.",
+                    "description": "Identifies the ABI to which the object is targeted.",
                     "type": "number"
                 },
                 "class": {
@@ -54,7 +54,7 @@
                     "type": "string"
                 },
                 "os_abi": {
-                    "description": "Identifies the version of the ABI to which the object is targeted.",
+                    "description": "Identifies the operating system and ABI to which the object is targeted.",
                     "type": "string"
                 },
                 "type": {
